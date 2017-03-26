@@ -28,6 +28,9 @@ WORKDIR /app/
 
 ENV DOCKER_HOST unix:///tmp/docker.sock
 
+# nginx custom configuration
+ADD conf.d/ /etc/nginx/conf.d/
+
 VOLUME ["/etc/nginx/certs"]
 
 ENTRYPOINT ["/app/docker-entrypoint.sh"]
