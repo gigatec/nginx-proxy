@@ -6,3 +6,4 @@ proxy:
     - "80:80"
   volumes:
     - /var/run/docker.sock:/tmp/docker.sock:ro
+    - ./conf.d/custom.conf:/etc/nginx/conf.d/custom.conf
